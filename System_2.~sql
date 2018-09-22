@@ -1,5 +1,0 @@
---查看表空间使用量
-select t.tablespace_name, round(sum(bytes / (1024 * 1024)), 0) ts_size
-  from dba_tablespaces t, dba_data_files d
- where t.tablespace_name = d.tablespace_name
- group by t.tablespace_name;
